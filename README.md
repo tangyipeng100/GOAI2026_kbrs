@@ -98,9 +98,3 @@ else:
 ```
 
 真实运行时，每个控制周期都要传入最新图像和定位位姿，但 world goal 保持不变；运行时会重新计算局部 `<input_target>`。开始新的导航任务前调用 `session.reset()` 清空多帧历史和 STOP 状态。机器人端还应独立实现轨迹跟踪、避障、速度限制和急停。完整字段和接口说明见 [Goal Point 推理代码](docs/inference.md)。
-
-## GitHub Pages 部署
-
-推送 `main` 后，[部署工作流](.github/workflows/deploy-pages.yml) 会自动导出并发布网站。首次发布需在仓库 **Settings → Pages → Build and deployment → Source** 选择 **GitHub Actions**。发布完成后访问 [展示主页](https://tangyipeng100.github.io/GOAI2026_kbrs/)。
-
-仓库代码按 [Apache-2.0](LICENSE) 许可发布；第三方模型、场景与产品素材遵守各自授权。
