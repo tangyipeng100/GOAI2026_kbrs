@@ -52,8 +52,8 @@ def public_route_id(route_id: str) -> str:
 
 def find_font(size: int):
     candidates = (
-        Path("C:/Windows/Fonts/segoeui.ttf"),
         Path("C:/Windows/Fonts/msyh.ttc"),
+        Path("C:/Windows/Fonts/segoeui.ttf"),
     )
     for candidate in candidates:
         if candidate.exists():
@@ -86,7 +86,7 @@ def render_route_map(points: list[dict], output: Path):
     body_font = find_font(22)
     label_font = find_font(18)
     draw.text((54, 42), "云谷中心 · 31 点巡逻路线", font=title_font, fill="#f7f8f8")
-    draw.text((56, 96), "30 segments · point 29 is intentionally absent", font=body_font, fill="#8e989b")
+    draw.text((56, 96), "30 段连续任务 · 逐站下发目标", font=body_font, fill="#8e989b")
 
     for point, (x, y) in zip(points, projected):
         index = int(point["index"])
@@ -95,8 +95,8 @@ def render_route_map(points: list[dict], output: Path):
         draw.ellipse((x - radius, y - radius, x + radius, y + radius), fill=color, outline="#080a0b", width=3)
         draw.text((x + 13, y - 22), str(index), font=label_font, fill="#d9dedf")
 
-    draw.rounded_rectangle((48, height - 98, 555, height - 42), radius=6, fill="#111619", outline="#273033")
-    draw.text((68, height - 82), "DIGITAL TWIN ROUTE · NOT A CONTINUOUS ROBOT RUN", font=label_font, fill="#a8b0b2")
+    draw.rounded_rectangle((48, height - 98, 510, height - 42), radius=6, fill="#111619", outline="#273033")
+    draw.text((68, height - 82), "31 个必经点 · 30 段独立导航任务", font=label_font, fill="#a8b0b2")
     output.parent.mkdir(parents=True, exist_ok=True)
     image.save(output, quality=94)
 

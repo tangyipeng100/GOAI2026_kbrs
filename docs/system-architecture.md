@@ -9,7 +9,7 @@ Gaussian / 碰撞网格 / NavMesh
               |
 世界坐标 Goal -> 机器人局部 GoalPoint
               |
-OmniNav SlowFast + GoalPoint LoRA
+Goal Point VLN 模型
               |
 waypoint 序列 + STOP 概率
               |

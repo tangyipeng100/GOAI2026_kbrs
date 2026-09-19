@@ -1,110 +1,71 @@
-# 恐怖如斯 GoalNav Demo
+# 恐怖如斯战队 | GOAI 2026 园区巡检
 
-恐怖如斯战队参加 **2026世界人工智能开源大赛（GOAI）总决赛** 的展示与开源仓库。
+**2026 世界人工智能开源大赛（GOAI）总决赛 · 赛道四「具身未来」· 赛题二「产业园区全地形巡逻挑战赛」**
 
-- 赛道四：具身未来（Embodied Future）
-- 赛题二：产业园区全地形巡逻挑战赛
-- 目标平台：云深处山猫 S10
-- 方案：Gaussian 数字孪生、SLAM 定位、逐站 GoalPoint 导航、视觉语义提示与安全控制
+可靠定位助力视觉语言导航落地园区巡检。我们以真实扫描构建高保真高斯场景，结合地图定位、语义指令与局部 Goal Point，让山猫 S10 按顺序完成园区内的逐站导航任务。VLN 模型支持前向单视图或左／前／右三视图纯视觉观测，并利用多帧信息决策；精确到点所需的地图位姿由定位模块提供。
 
-本仓库优先公开可复用的数据接口、坐标变换、评测汇总、路线播放器和展示网站。完整模型权重、私有训练服务、服务器配置与未经授权的原始数据不在首批开源范围内。
+**[打开展示主页](https://tangyipeng100.github.io/GOAI2026_kbrs/)** · **[查看高斯场景](https://lcc-viewer.xgrids.cloud/pub/9e0212b2-49ff-419e-8c24-2c8a21e8bcc5)** · **[观看完整方案视频](public/media/goai_yungu_vln_overview_v2_64s.mp4)** · **[魔搭版图文说明](modelscope_release/README.md)**
 
-## 已验证结果
+[![园区赛场与方案视频封面](public/media/goai_yungu_vln_overview_v2_poster.jpg)](public/media/goai_yungu_vln_overview_v2_64s.mp4)
 
-| 模型 | STOP | STOP + 误差 <= 1m | STOP + 误差 <= 0.25m | 平均终点误差 | 碰撞记录 |
-| --- | ---: | ---: | ---: | ---: | ---: |
-| epoch1 | 30/30 | 27/30 | 12/30 | 0.642m | 175 |
-| epoch2 | 30/30 | 30/30 | 14/30 | 0.255m | 41 |
+## 导航方案
 
-这些结果来自同一云谷数字孪生场景中的 30 个独立 episode。每段均独立初始化，并不表示模型一次无重置连续跑完 30 段。数字孪生演示、模型仿真推理和真实 S10 实机结果在页面和视频中分别标注。
+![定位、高斯场景训练、Goal Point VLN 与安全执行的系统框架](public/media/kbrs-vln-architecture-academic-dark-v1.png)
 
-## 本地预览
+1. **场景与训练：**实景扫描生成高斯地图，结合碰撞网格与可通行区域构建仿真环境；按逐站目标采样并校正训练轨迹。
+2. **可靠定位：**多传感器融合定位持续输出地图坐标与机器人位姿，将世界目标转换为局部 Goal Point。
+3. **视觉语言导航：**利用单视图或三视图、多帧观测、语义指令和 Goal Point 决策路径与 STOP。
+4. **安全执行：**控制与避障层执行动作，确认当前站到点后再下发下一目标。方案面向平地、石子路、高台与楼梯等复杂地形。
 
-环境要求：Node.js `>=22.13.0`。
+本仓库的 31 个 waypoint 构成 30 段相邻站点任务。展示页可选择每个路段，回放两个模型版本的推理视频及轨迹、STOP、误差等结果。
 
-```powershell
-npm ci
-npm run build
-npm start
-```
+## 仿真评测
 
-默认生产预览地址为 `http://127.0.0.1:8787/`。开发模式可使用 `npm run dev`。
+| 指标（30 段） | Epoch 1 | Epoch 2 |
+| --- | ---: | ---: |
+| 模型输出 STOP | 27 / 30 | 30 / 30 |
+| STOP 且终点误差 ≤ 1 m | 27 / 30 | 30 / 30 |
+| STOP 且终点误差 ≤ 0.25 m | 12 / 30 | 14 / 30 |
+| 平均终点误差 | 0.642 m | 0.255 m |
+| 碰撞记录 | 175 | 41 |
 
-## 公开内容
+结果来自同一云谷高斯仿真场景中的 **30 个独立初始化 episode**，并非一次无重置连续巡逻，也不代表实机比赛成绩。页面将场景展示、模型推理与后续实机验证分开呈现。
 
-```text
-app/                            展示网站页面与样式
-components/route-explorer.tsx   30 段 epoch1/epoch2 回放播放器
-examples/goal_transform.py      世界坐标目标到机器人局部 GoalPoint 示例
-scripts/prepare_public_assets.py 生成路线、指标和媒体清单
-scripts/summarize_eval.py       从逐段 summary 汇总公开指标
-scripts/render_opening_film.py  生成 60 秒开场片、15 秒 teaser 和封面
-public/data/                    路线、指标与数据集元数据
-docs/                           架构、数据格式和第三方边界
-```
+## 仓库内容
 
-## 媒体资产
+| 目录 | 内容 |
+| --- | --- |
+| `app/`, `components/` | 响应式展示站与逐路段回放播放器 |
+| `public/media/`, `public/data/` | 框架图、讲解视频、路线视频、海报与公开指标 |
+| `modelscope_release/` | 可独立上传魔搭的图文说明和配套媒体 |
+| `examples/goal_transform.py` | 世界目标到机器人局部 Goal Point 的坐标转换示例 |
+| `inference/` | [多帧与三视图打包、Goal Point 输入、模型前向和 STOP 判定](docs/inference.md) |
+| `scripts/` | 公开资源准备、评测汇总、视频制作及校验工具 |
+| `docs/` | 数据格式、系统设计和第三方素材说明 |
 
-公开部署需要以下目录：
+原始高斯扫描资产、完整模型权重、私有训练与推理服务不包含在本仓库。媒体与第三方组件的使用边界见 [第三方说明](docs/third-party.md)。
 
-```text
-public/media/routes/epoch1/
-public/media/routes/epoch2/
-public/media/contact-sheets/epoch1/
-public/media/contact-sheets/epoch2/
-```
+推理模块可用 `python -m unittest discover -s inference/tests -v` 测试，不需要模型权重；实际加载 checkpoint 时需提供兼容的模型定义、预处理器及其授权依赖。
 
-每个目录按 `route_001` 到 `route_030` 与 `public/data/routes.json` 对齐。大体积媒体可放在 GitHub Release 或魔搭数据集仓库；页面和代码不依赖 H800、SSH 或本地推理服务。
+## 本地运行
 
-## 数据与模型接口
-
-模型每一步接收：
-
-1. 20 帧历史 front 图像；
-2. 当前 left/front/right 三视图；
-3. 里程计与机器人姿态；
-4. 英文导航指令；
-5. 世界目标转换得到的局部 GoalPoint。
-
-逐站工程控制器只在当前 checkpoint 完成后下发下一目标。训练时每个相邻 checkpoint 形成独立 episode，并对起点、朝向、定位和视觉条件进行小幅扰动。详见 [数据格式](docs/data-format.md) 与 [系统架构](docs/system-architecture.md)。
-
-## 复现工具
-
-```powershell
-# 验证坐标变换示例
-python examples/goal_transform.py
-
-# 重新汇总逐段评测结果
-python scripts/summarize_eval.py --help
-
-# 在拥有授权的本地媒体时重新生成公开资源
-python scripts/prepare_public_assets.py --help
-```
-
-## 部署
-
-### GitHub Pages / 静态托管
-
-网站不请求私有 API。构建产物可交给支持 Cloudflare Worker/Vinext 的托管服务；如采用纯静态托管，应先将站点导出或改用仓库内的 Docker 方式。
-
-### 魔搭创空间
-
-仓库包含 `Dockerfile`，创空间端口使用 `7860`：
+需要 Node.js 22 及以上版本。
 
 ```bash
-docker build -t kbrs-goalnav-demo .
-docker run --rm -p 7860:7860 kbrs-goalnav-demo
+npm ci
+npm run dev
 ```
 
-## 开源边界
+开发服务器的地址以终端输出为准。若要本地核验 GitHub Pages 版本：
 
-- 本仓库自研代码使用 Apache-2.0 许可证。
-- OmniNav、Habitat-Sim/Habitat-GS、Gaussian 场景、山猫 S10 产品素材及第三方字体/图标遵循各自许可证或授权。
-- XGRIDS 场景通过原发布链接访问，不在本仓库重新分发原始扫描资产。
-- 脱敏样本不得反推出私有服务器地址、账号、真实定位密钥或比赛未公开资料。
+```bash
+npm run build:pages
+```
 
-详细说明见 [第三方与素材边界](docs/third-party.md)。
+这会在 `out/` 生成带 `/GOAI2026_kbrs` 子路径的静态站。默认 `npm run build` 仍是原有的 Vinext/Cloudflare 构建，魔搭 Docker 入口仍可使用。
 
-## Citation
+## GitHub Pages 部署
 
-若本项目中的路线数据格式、GoalPoint 坐标变换或展示组件对你的工作有帮助，请在发布版本提供的 `CITATION.cff` 信息基础上引用本仓库。赛事后的模型卡、数据卡和实机结果会独立追加，不改写已经发布的仿真证据。
+推送 `main` 后，[部署工作流](.github/workflows/deploy-pages.yml) 会自动导出并发布网站。首次发布需在仓库 **Settings → Pages → Build and deployment → Source** 选择 **GitHub Actions**。发布完成后访问 [展示主页](https://tangyipeng100.github.io/GOAI2026_kbrs/)。
+
+仓库代码按 [Apache-2.0](LICENSE) 许可发布；第三方模型、场景与产品素材遵守各自授权。

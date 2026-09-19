@@ -5,10 +5,10 @@
 | 内容 | 本仓库是否分发 | 说明 |
 | --- | --- | --- |
 | 展示网站、路线播放器、坐标变换与汇总脚本 | 是 | Apache-2.0 |
-| OmniNav / SlowFast 基座代码与权重 | 否 | 遵循上游项目许可 |
+| 第三方 VLN 基座代码与权重 | 否 | 遵循上游项目许可 |
 | Habitat-Sim / Habitat-GS | 否 | 遵循上游项目许可 |
 | XGRIDS Gaussian 原始场景 | 否 | 仅链接原发布页面 |
 | 山猫 S10 产品图、品牌与模型 | 视授权而定 | 产品名称和商标归原权利人 |
 | 比赛现场实机录像 | 后续追加 | 仅发布已取得授权的片段 |
 
-开场片中的 Gaussian S10 与路线动画标为 **Digital Twin Visualization**。模型 episode 标为 **Model Simulation Inference**；两者均不等同于真实机器人连续跑通。
+赛场画面和路线动画是方案展示，模型 episode 是仿真推理；两者均不等同于真实机器人连续跑通。

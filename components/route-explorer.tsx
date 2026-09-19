@@ -2,6 +2,7 @@
 
 import { Check, ChevronLeft, ChevronRight, Pause, Play } from "lucide-react";
 import { useEffect, useMemo, useRef, useState } from "react";
+import { publicPath } from "@/lib/public-path";
 
 type ModelResult = {
   video: string;
@@ -42,10 +43,10 @@ export function RouteExplorer() {
   const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
-    fetch("/data/routes.json")
+    fetch(publicPath("/data/routes.json"))
       .then((response) => {
         if (!response.ok) throw new Error("route manifest unavailable");
-        return response.json();
+        return response.json() as Promise<Manifest>;
       })
       .then(setManifest)
       .catch(() => setManifest(null));
@@ -88,12 +89,12 @@ export function RouteExplorer() {
           controls
           playsInline
           preload="metadata"
-          poster={result.poster}
+          poster={publicPath(result.poster)}
           onPlay={() => setPlaying(true)}
           onPause={() => setPlaying(false)}
           onEnded={() => setPlaying(false)}
         >
-          <source src={result.video} type="video/mp4" />
+          <source src={publicPath(result.video)} type="video/mp4" />
         </video>
         <div className="route-media-label">
           <span>MODEL INFERENCE · {model.toUpperCase()}</span>

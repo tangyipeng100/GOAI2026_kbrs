@@ -1,237 +1,223 @@
 import {
+  ArrowDown,
   Box,
-  BrainCircuit,
-  Code2,
   ExternalLink,
-  MapPinned,
+  GitFork,
   Play,
   Route,
   ScanLine,
   ShieldCheck,
+  Target,
 } from "lucide-react";
 import Image from "next/image";
 import { RouteExplorer } from "@/components/route-explorer";
+import { publicPath } from "@/lib/public-path";
 
-const pipeline = [
-  { icon: ScanLine, name: "定位建图", detail: "双激光雷达、IMU 与全局重定位" },
-  { icon: Box, name: "数字孪生", detail: "Gaussian 观测、碰撞网格与 NavMesh" },
-  { icon: MapPinned, name: "逐站目标", detail: "31 个 checkpoint，按站下发任务" },
-  { icon: BrainCircuit, name: "GoalPoint VLN", detail: "视觉、历史、里程计与局部目标融合" },
-  { icon: ShieldCheck, name: "执行与安全", detail: "轨迹控制、碰撞约束与 STOP 判定" },
-];
+const sceneUrl = "https://lcc-viewer.xgrids.cloud/pub/9e0212b2-49ff-419e-8c24-2c8a21e8bcc5";
+const repositoryUrl = "https://github.com/tangyipeng100/GOAI2026_kbrs";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-[#050607] text-white">
-      <section className="hero-stage relative isolate min-h-[92svh] overflow-hidden">
-        <video
-          className="absolute inset-0 h-full w-full object-cover"
-          autoPlay
-          muted
-          loop
-          playsInline
-          poster="/media/hero-poster.jpg"
-          aria-label="云谷中心 GoalPoint 模型推理演示"
-        >
-          <source src="/media/goai_yungu_goalnav_teaser_15s.mp4" type="video/mp4" />
-          <source src="/media/hero-preview.mp4" type="video/mp4" />
-        </video>
-        <div className="hero-shade absolute inset-0" />
-
-        <nav className="relative z-10 flex items-center justify-between px-5 py-5 sm:px-10 lg:px-16">
-          <a className="brand-lockup" href="#top" aria-label="返回首页">
-            <span className="brand-mark">KBRS</span>
-            <span className="brand-name">恐怖如斯战队</span>
-          </a>
-          <div className="hidden items-center gap-7 text-sm text-white/74 md:flex">
-            <a href="#scene">数字孪生</a>
-            <a href="#route">巡逻路线</a>
-            <a href="#evidence">验证结果</a>
-            <a href="#opensource">开源方案</a>
-          </div>
-          <a
-            className="icon-link"
-            href="https://lcc-viewer.xgrids.cloud/pub/9e0212b2-49ff-419e-8c24-2c8a21e8bcc5"
-            target="_blank"
-            rel="noreferrer"
-            title="打开高斯场景"
-          >
-            <Box size={18} aria-hidden="true" />
-            <span className="hidden sm:inline">进入三维场景</span>
-          </a>
+    <div className="site-shell">
+      <header className="site-nav">
+        <a className="brand-lockup" href="#top" aria-label="返回首页">
+          <span className="brand-mark">KBRS</span>
+          <span>
+            <strong>恐怖如斯战队</strong>
+            <small>GOAI 2026 · Embodied Future</small>
+          </span>
+        </a>
+        <nav aria-label="页面导航">
+          <a href="#system">方案</a>
+          <a href="#film">影片</a>
+          <a href="#scene">场景</a>
+          <a href="#route">推理</a>
+          <a href="#opensource">开源</a>
         </nav>
+        <a className="nav-scene-link" href={sceneUrl} target="_blank" rel="noreferrer">
+          <Box size={17} aria-hidden="true" />
+          <span>三维场景</span>
+          <ExternalLink size={14} aria-hidden="true" />
+        </a>
+      </header>
 
-        <div id="top" className="relative z-10 flex min-h-[calc(92svh-80px)] items-end px-5 pb-24 sm:px-10 lg:px-16 lg:pb-28">
-          <div className="max-w-5xl">
-            <p className="event-line">GOAI 2026 总决赛 · 赛道四「具身未来」· 赛题二</p>
-            <h1 className="hero-title">
-              恐怖如斯<span>·</span>视觉语义注入
-              <br />
-              具身导航巡检方案
-            </h1>
-            <p className="mt-6 max-w-2xl text-base leading-7 text-white/76 sm:text-lg">
-              面向云谷中心产业园区，让云深处山猫 S10 依次经过 31 个目标点，完成定位建图、复杂地形通行与逐站精准停车。
+      <main>
+        <section id="top" className="hero-stage">
+          <video autoPlay muted loop playsInline poster={publicPath("/media/goai_yungu_vln_overview_v2_poster.jpg")} aria-label="云谷中心赛场俯视">
+            <source src={publicPath("/media/goai_yungu_vln_overview_v2_teaser_15s.mp4")} type="video/mp4" />
+          </video>
+          <div className="hero-shade" />
+          <div className="hero-copy">
+            <p className="event-line">赛道四 · 具身未来 / 赛题二 · 产业园区全地形巡逻挑战赛</p>
+            <h1>视觉语言导航<br />园区巡检系统</h1>
+            <p className="hero-statement">让视觉语言导航真正落地园区巡检</p>
+            <p className="hero-description">
+              面向云谷中心真实赛场，以可信定位、高保真高斯场景和 Goal Point VLN，驱动山猫 S10 完成 31 个必经点的逐站导航。
             </p>
-            <div className="mt-8 flex flex-wrap items-center gap-3">
+            <div className="hero-actions">
               <a className="primary-action" href="#film">
                 <Play size={18} fill="currentColor" aria-hidden="true" />
-                观看开场影片
+                播放完整影片
               </a>
-              <a
-                className="secondary-action"
-                href="https://www.goaihz.com/tracks?track=embodied"
-                target="_blank"
-                rel="noreferrer"
-              >
-                官方赛题 <ExternalLink size={16} aria-hidden="true" />
+              <a className="secondary-action" href="#system">
+                查看导航方案 <ArrowDown size={17} aria-hidden="true" />
               </a>
             </div>
           </div>
-        </div>
-
-        <div className="hero-proof absolute inset-x-0 bottom-0 z-10 grid grid-cols-2 border-t border-white/15 bg-black/32 backdrop-blur-md sm:grid-cols-4">
-          <div><strong>31</strong><span>必经 waypoint</span></div>
-          <div><strong>30 / 30</strong><span>epoch2 输出 STOP</span></div>
-          <div><strong>0.255 m</strong><span>平均终点误差</span></div>
-          <div><strong>230</strong><span>训练与验证轨迹</span></div>
-        </div>
-      </section>
-
-      <section id="film" className="section-band film-section">
-        <div className="section-heading">
-          <p className="section-kicker">OPENING FILM / 60 SEC</p>
-          <h2>一条路线，看见完整任务</h2>
-          <p>数字孪生镜头展示赛题路线，随后切入真实模型仿真推理。二者在片中分别标注，不混淆证据边界。</p>
-        </div>
-        <video className="feature-film" controls playsInline poster="/media/goai_yungu_goalnav_poster.png">
-          <source src="/media/goai_yungu_goalnav_full_60s.mp4" type="video/mp4" />
-        </video>
-        <p className="media-note">数字孪生路线演示 / Digital Twin Visualization</p>
-      </section>
-
-      <section id="scene" className="section-band scene-section">
-        <div className="section-heading split-heading">
-          <div>
-            <p className="section-kicker">01 / DIGITAL TWIN</p>
-            <h2>真实云谷中心<br />不从抽象地图开始</h2>
+          <div className="hero-proof" aria-label="方案关键数据">
+            <div><strong>31</strong><span>必经目标点</span></div>
+            <div><strong>30</strong><span>逐站导航任务</span></div>
+            <div><strong>30 / 30</strong><span>模型输出 STOP</span></div>
+            <div><strong>0.255 m</strong><span>平均终点误差</span></div>
           </div>
-          <p>高斯场景承担真实感观测，碰撞网格和 NavMesh 提供可通行几何。两类地图各司其职，不把视觉重建等同于导航地图。</p>
-        </div>
-        <div className="gaussian-frame">
-          <iframe
-            src="https://lcc-viewer.xgrids.cloud/pub/9e0212b2-49ff-419e-8c24-2c8a21e8bcc5"
-            title="云谷中心 Gaussian 场景"
-            loading="lazy"
-            allowFullScreen
-          />
-          <div className="gaussian-label">
-            <span>LIVE GAUSSIAN VIEWER</span>
-            <a href="https://lcc-viewer.xgrids.cloud/pub/9e0212b2-49ff-419e-8c24-2c8a21e8bcc5" target="_blank" rel="noreferrer">
-              独立打开 <ExternalLink size={14} />
-            </a>
-          </div>
-        </div>
-      </section>
+        </section>
 
-      <section id="route" className="section-band route-section">
-        <div className="section-heading split-heading">
-          <div>
-            <p className="section-kicker">02 / MODEL EVIDENCE</p>
-            <h2>30 段逐站推理<br />每一段都可检查</h2>
-          </div>
-          <p>选择路段和模型版本，直接查看三视图、俯视轨迹、STOP 与终点误差。route12 和 route25 使用人工核验后的正确路线。</p>
-        </div>
-        <RouteExplorer />
-      </section>
-
-      <section className="section-band system-section">
-        <div className="section-heading">
-          <p className="section-kicker">03 / SYSTEM</p>
-          <h2>从定位到执行的完整闭环</h2>
-          <p>视觉语言模型并不替代全部工程系统，它在可靠定位、几何约束和底层运动能力之上提供目标理解与局部导航决策。</p>
-        </div>
-        <div className="pipeline">
-          {pipeline.map(({ icon: Icon, name, detail }, index) => (
-            <div className="pipeline-node" key={name}>
-              <span>{String(index + 1).padStart(2, "0")}</span>
-              <Icon size={25} aria-hidden="true" />
-              <h3>{name}</h3>
-              <p>{detail}</p>
+        <section id="system" className="section-band system-section">
+          <div className="section-heading system-heading">
+            <div>
+              <p className="section-kicker">01 / NAVIGATION SYSTEM</p>
+              <h2><span>可靠定位助力</span><wbr /><span>视觉语言导航</span><wbr /><span>落地园区巡检</span></h2>
             </div>
-          ))}
-        </div>
-      </section>
-
-      <section id="evidence" className="section-band evidence-section">
-        <div className="section-heading split-heading">
-          <div>
-            <p className="section-kicker">04 / VERIFIED RESULTS</p>
-            <h2>精度提升，也保留<br />严格阈值下的不足</h2>
+            <p>VLN 支持单视图或三视图纯视觉观测部署；逐站精确到点时，可靠定位提供地图坐标与机器人位姿，将目标转换为局部 Goal Point，交由模型决策和安全层执行。</p>
           </div>
-          <p>结果来自同一云谷数字孪生场景、同基础路段的起点扰动验证。下列数字不代表跨场景或真实机器人比赛成绩。</p>
-        </div>
-        <div className="metric-table" role="table" aria-label="epoch1 和 epoch2 指标对比">
-          <div className="metric-row metric-head" role="row">
-            <span>指标</span><span>EPOCH 1</span><span>EPOCH 2</span>
+          <a className="architecture-diagram" href={publicPath("/media/kbrs-vln-architecture-academic-dark-v1.png")} target="_blank" rel="noreferrer" title="查看完整导航方案图">
+            <Image src={publicPath("/media/kbrs-vln-architecture-academic-dark-v1.png")} width={1672} height={941} alt="高保真高斯场景训练、可信三维定位、Goal Point 与语义输入的 VLN 模型，以及山猫 S10 执行框架" />
+          </a>
+          <div className="system-ledger">
+            <div><ScanLine size={22} /><span>可信定位</span><p>双激光雷达、IMU、全局搜索与连续定位。</p></div>
+            <div><Target size={22} /><span>VLN 决策</span><p>单视图或三视图纯视觉观测，结合多帧、Goal Point 与语义输入。</p></div>
+            <div><ShieldCheck size={22} /><span>安全执行</span><p>局部轨迹、避障、安全仲裁与逐站 STOP。</p></div>
           </div>
-          <div className="metric-row" role="row"><span>平均终点误差</span><span>0.642 m</span><strong>0.255 m</strong></div>
-          <div className="metric-row" role="row"><span>STOP + ≤ 1 m</span><span>27 / 30</span><strong>30 / 30</strong></div>
-          <div className="metric-row" role="row"><span>STOP + ≤ 0.25 m</span><span>12 / 30</span><strong>14 / 30</strong></div>
-          <div className="metric-row" role="row"><span>碰撞记录</span><span>175</span><strong>41</strong></div>
-          <div className="metric-row" role="row"><span>卡住退出</span><span>3</span><strong>0</strong></div>
-        </div>
-      </section>
+        </section>
 
-      <section className="section-band data-section">
-        <div className="data-visual">
-          <Image
-            src="/media/route-map.png"
-            alt="云谷中心 31 个 waypoint 和 30 段巡逻路线"
-            width={1600}
-            height={1000}
-          />
-        </div>
-        <div className="data-copy">
-          <p className="section-kicker">05 / TRAINING DATA</p>
-          <h2>30 个基础路段，扩增为 230 条训练轨迹</h2>
-          <p>每个路段加入起点位置、朝向和定位噪声扰动；每个样本包含 20 张历史前视图、当前左中右三视图、里程计和局部 GoalPoint。</p>
+        <section id="film" className="section-band film-section">
+          <div className="section-heading film-heading">
+            <div>
+              <p className="section-kicker">02 / OVERVIEW FILM</p>
+              <h2>完整方案讲解</h2>
+            </div>
+            <p>64 秒串联赛场俯视、山猫 S10、定位与 VLN 框架，以及阶梯、绕石、穿草三段完整模型仿真推理。</p>
+          </div>
+          <div className="film-stage">
+            <video className="feature-film" controls playsInline preload="metadata" poster={publicPath("/media/goai_yungu_vln_overview_v2_poster.jpg")}>
+              <source src={publicPath("/media/goai_yungu_vln_overview_v2_64s.mp4")} type="video/mp4" />
+              <track kind="captions" src={publicPath("/media/goai_yungu_vln_overview_v2.zh.vtt")} srcLang="zh" label="中文讲解" />
+            </video>
+          </div>
+          <div className="film-ledger">
+            <span>中文配音与字幕</span>
+            <span>完整 16:9 画面</span>
+            <span>三段 VLN 仿真推理</span>
+            <span>各路段独立初始化</span>
+          </div>
+        </section>
+
+        <section className="section-band mission-section">
+          <div className="mission-copy">
+            <p className="section-kicker">03 / PATROL MISSION</p>
+            <h2>把长路线，拆成可确认的逐站任务</h2>
+            <p>
+              比赛要求机器人依次经过全部目标点。工程系统只在当前站完成并确认停车后，才下发下一站，从而把 31 点巡逻转化为 30 段可验证导航任务。
+            </p>
+            <ol className="mission-steps">
+              <li><span>01</span><div><strong>定位当前位姿</strong><p>持续输出地图坐标与定位质量。</p></div></li>
+              <li><span>02</span><div><strong>下发局部 Goal Point</strong><p>结合语义指令生成局部导航决策。</p></div></li>
+              <li><span>03</span><div><strong>停车并确认到点</strong><p>模型输出 STOP 后进入下一站任务。</p></div></li>
+            </ol>
+          </div>
+          <figure className="route-map-figure">
+            <Image src={publicPath("/media/route-map.png")} alt="云谷中心 31 个必经点和 30 段导航路线" width={1600} height={1000} priority />
+            <figcaption>云谷中心巡逻点序列 · 起点与终点以红色标记</figcaption>
+          </figure>
+        </section>
+
+        <section id="scene" className="section-band scene-section">
+          <div className="section-heading scene-heading">
+            <div>
+              <p className="section-kicker">04 / GAUSSIAN SCENE</p>
+              <h2>从真实扫描，建立高保真训练与验证场景</h2>
+            </div>
+            <p>高斯地图提供接近真实赛场的视觉观测；碰撞网格和 NavMesh 提供可通行几何，共同支撑轨迹采样、模型训练与仿真验证。</p>
+          </div>
+          <div className="gaussian-frame">
+            <iframe src={sceneUrl} title="云谷中心 Gaussian 场景" loading="lazy" allowFullScreen />
+            <div className="gaussian-label">
+              <span>云谷中心 · 高斯场景</span>
+              <a href={sceneUrl} target="_blank" rel="noreferrer">
+                全屏打开 <ExternalLink size={14} aria-hidden="true" />
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <section id="route" className="section-band route-section">
+          <div className="section-heading route-heading">
+            <div>
+              <p className="section-kicker">05 / INFERENCE REPLAYS</p>
+              <h2>逐路段模型推理回放</h2>
+            </div>
+            <p>选择路段和模型版本，查看前视画面、俯视轨迹、STOP、终点误差与完整执行过程。</p>
+          </div>
+          <RouteExplorer />
+        </section>
+
+        <section id="evidence" className="section-band evidence-section">
+          <div className="section-heading evidence-heading">
+            <div>
+              <p className="section-kicker">06 / QUANTITATIVE RESULTS</p>
+              <h2>模型推理量化结果</h2>
+            </div>
+            <p>结果来自同一云谷高斯仿真场景、同基础路段的起点扰动验证，不代表跨场景或实机比赛成绩。</p>
+          </div>
+          <div className="proof-metrics">
+            <div><strong>30 / 30</strong><span>模型输出 STOP</span></div>
+            <div><strong>0.255 m</strong><span>平均终点误差</span></div>
+            <div><strong>30 / 30</strong><span>STOP + 终点误差 ≤ 1 m</span></div>
+          </div>
+          <div className="metric-table" role="table" aria-label="epoch1 和 epoch2 指标对比">
+            <div className="metric-row metric-head" role="row"><span>指标</span><span>EPOCH 1</span><span>EPOCH 2</span></div>
+            <div className="metric-row" role="row"><span>平均终点误差</span><span>0.642 m</span><strong>0.255 m</strong></div>
+            <div className="metric-row" role="row"><span>STOP + ≤ 1 m</span><span>27 / 30</span><strong>30 / 30</strong></div>
+            <div className="metric-row" role="row"><span>STOP + ≤ 0.25 m</span><span>12 / 30</span><strong>14 / 30</strong></div>
+            <div className="metric-row" role="row"><span>碰撞记录</span><span>175</span><strong>41</strong></div>
+            <div className="metric-row" role="row"><span>卡住退出</span><span>3</span><strong>0</strong></div>
+          </div>
+        </section>
+
+        <section className="section-band data-section">
+          <div className="data-copy">
+            <p className="section-kicker">07 / TRAINING DATA</p>
+            <h2>从 30 个基础路段，扩增为 230 条训练与验证轨迹</h2>
+            <p>每段加入起点位置、朝向和定位噪声扰动。训练样本包含多帧历史观测、当前单视图或左／前／右三视图、里程计、语义指令与局部 Goal Point。</p>
+          </div>
           <dl className="data-stats">
             <div><dt>训练轨迹</dt><dd>200</dd></div>
             <div><dt>验证轨迹</dt><dd>30</dd></div>
             <div><dt>训练样本</dt><dd>6,140</dd></div>
-            <div><dt>每样本图像</dt><dd>23</dd></div>
+            <div><dt>基础路段</dt><dd>30</dd></div>
           </dl>
-        </div>
-      </section>
+        </section>
 
-      <section id="opensource" className="section-band open-section">
-        <div className="section-heading split-heading">
-          <div>
-            <p className="section-kicker">06 / OPEN SOURCE</p>
-            <h2>公开接口和证据，<br />不公开内部基础设施</h2>
+        <section id="opensource" className="section-band open-section">
+          <div className="open-repo">
+            <div>
+              <p className="section-kicker">08 / REPOSITORY</p>
+              <h2>项目开源仓库</h2>
+              <p>展示页面、数据格式、Goal Point 坐标转换与评测工具统一收录于项目仓库。</p>
+            </div>
+            <a className="repo-link" href={repositoryUrl} target="_blank" rel="noreferrer" aria-label="打开 GOAI2026_kbrs GitHub 仓库">
+              <GitFork size={28} aria-hidden="true" />
+              <span><small>GitHub Repository</small><strong>GOAI2026_kbrs</strong></span>
+              <ExternalLink size={18} aria-hidden="true" />
+            </a>
           </div>
-          <p>首批仓库提供展示页、路线清单、GoalPoint 坐标转换、评测汇总和脱敏样本。完整训练服务、私有路径与模型权重不在首批范围。</p>
-        </div>
-        <div className="code-surface">
-          <div className="code-caption"><Code2 size={18} /> examples/goal_transform.py</div>
-          <pre><code>{`dx = goal_x - robot_x\ndy = goal_y - robot_y\n\nforward = cos(yaw) * dx + sin(yaw) * dy\nleft    = -sin(yaw) * dx + cos(yaw) * dy\n\ninput_target = [forward, left]`}</code></pre>
-          <div className="repo-actions">
-            <span>kbrs-goalnav-demo</span>
-            <span>Website · Data schema · Evaluation tools</span>
-          </div>
-        </div>
-      </section>
+        </section>
+      </main>
 
       <footer>
-        <div>
-          <strong>恐怖如斯战队</strong>
-          <span>2026世界人工智能开源大赛（GOAI）总决赛</span>
-        </div>
-        <div>
-          <Route size={17} aria-hidden="true" />
-          <span>赛道四 · 具身未来 / 赛题二 · 产业园区全地形巡逻挑战赛</span>
-        </div>
+        <div><strong>恐怖如斯战队</strong><span>让视觉语言导航真正落地园区巡检</span></div>
+        <div><Route size={17} aria-hidden="true" /><span>GOAI 2026 · 产业园区全地形巡逻挑战赛</span></div>
       </footer>
-    </main>
+    </div>
   );
 }
