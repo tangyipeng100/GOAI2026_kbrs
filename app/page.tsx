@@ -96,7 +96,6 @@ export default function Home() {
               <p className="section-kicker">02 / OVERVIEW FILM</p>
               <h2>完整方案讲解</h2>
             </div>
-            <p>64 秒串联赛场俯视、山猫 S10、定位与 VLN 框架，以及阶梯、绕石、穿草三段完整模型仿真推理。</p>
           </div>
           <div className="film-stage">
             <video className="feature-film" controls playsInline preload="metadata" poster={publicPath("/media/goai_yungu_vln_overview_v2_poster.jpg")}>
