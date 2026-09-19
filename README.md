@@ -47,22 +47,57 @@
 
 推理模块可用 `python -m unittest discover -s inference/tests -v` 测试，不需要模型权重；实际加载 checkpoint 时需提供兼容的模型定义、预处理器及其授权依赖。
 
-## 本地运行
+## 导航推理运行
 
-需要 Node.js 22 及以上版本。
+公开推理代码位于 `inference/`，用于复现多帧视觉观测、单视图或左／前／右三视图、里程计、语义指令和局部 Goal Point 到 waypoint 与 STOP 的核心链路。模型结构、checkpoint、仿真器和机器人驱动需由使用者另行准备。
 
-```bash
-npm ci
-npm run dev
-```
-
-开发服务器的地址以终端输出为准。若要本地核验 GitHub Pages 版本：
+建议使用支持 CUDA 的 Python 环境，并安装与 checkpoint 对应版本的 PyTorch、Transformers、Pillow 和视觉预处理依赖。首先运行不依赖权重的测试，确认坐标变换与状态管理正常：
 
 ```bash
-npm run build:pages
+python -m unittest discover -s inference/tests -v
 ```
 
-这会在 `out/` 生成带 `/GOAI2026_kbrs` 子路径的静态站。默认 `npm run build` 仍是原有的 Vinext/Cloudflare 构建，魔搭 Docker 入口仍可使用。
+随后加载兼容 `input_waypoints` 的 VLN checkpoint、processor 和视觉预处理函数，并构造推理后端：
+
+```python
+from inference.qwen_backend import QwenWaypointBackend
+from inference.runtime import GoalPointSession, Pose, WorldPoint
+
+# 由实际模型工程提供以下三个对象：
+# loaded_waypoint_model = ...
+# loaded_processor = ...
+# vision_preprocessor = ...
+
+backend = QwenWaypointBackend(
+    model=loaded_waypoint_model,
+    processor=loaded_processor,
+    process_vision_info=vision_preprocessor,
+    device="cuda",
+)
+
+session = GoalPointSession(
+    backend,
+    start=WorldPoint(start_x, start_y, start_z),
+    start_yaw=start_yaw_rad,
+    goal=WorldPoint(goal_x, goal_y, goal_z),
+    num_views=3,  # 改为 1 可使用前向单视图
+)
+
+result = session.step(
+    front=front_pil,
+    left=left_pil,
+    right=right_pil,
+    pose=Pose(odom_forward, odom_left, odom_yaw),
+    instruction="Proceed to the goal and stop when you reach it.",
+)
+
+if result.stop:
+    stop_robot()
+else:
+    execute_local_trajectory(result.trajectory)
+```
+
+真实运行时，每个控制周期都要传入最新图像和定位位姿，但 world goal 保持不变；运行时会重新计算局部 `<input_target>`。开始新的导航任务前调用 `session.reset()` 清空多帧历史和 STOP 状态。机器人端还应独立实现轨迹跟踪、避障、速度限制和急停。完整字段和接口说明见 [Goal Point 推理代码](docs/inference.md)。
 
 ## GitHub Pages 部署
 
