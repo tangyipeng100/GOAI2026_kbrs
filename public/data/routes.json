@@ -1,0 +1,1555 @@
+{
+  "schemaVersion": 1,
+  "project": "恐怖如斯·视觉语义注入具身导航巡检方案",
+  "disclaimer": "30 个路段均为独立初始化的仿真 episode，不代表一次无重置连续运行。",
+  "pointOrder": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    30,
+    31,
+    32
+  ],
+  "points": [
+    {
+      "index": 1,
+      "scannerXYZ": [
+        17.014308999991044,
+        -0.3274249997921288,
+        -0.3566799999999999
+      ],
+      "habitatXYZ": [
+        17.014308999991044,
+        -0.3566799999999999,
+        0.3274249997921288
+      ]
+    },
+    {
+      "index": 2,
+      "scannerXYZ": [
+        27.490741999994498,
+        -0.6674250001087785,
+        -0.43905700000000003
+      ],
+      "habitatXYZ": [
+        27.490741999994498,
+        -0.43905700000000003,
+        0.6674250001087785
+      ]
+    },
+    {
+      "index": 3,
+      "scannerXYZ": [
+        31.67373700000462,
+        0.1986429998651147,
+        0.43622799999999984
+      ],
+      "habitatXYZ": [
+        31.67373700000462,
+        0.43622799999999984,
+        -0.1986429998651147
+      ]
+    },
+    {
+      "index": 4,
+      "scannerXYZ": [
+        36.169292999984464,
+        1.4070870000869036,
+        1.2125249999999994
+      ],
+      "habitatXYZ": [
+        36.169292999984464,
+        1.2125249999999994,
+        -1.4070870000869036
+      ]
+    },
+    {
+      "index": 5,
+      "scannerXYZ": [
+        40.555480999988504,
+        4.226706999819726,
+        2.278371
+      ],
+      "habitatXYZ": [
+        40.555480999988504,
+        2.278371,
+        -4.226706999819726
+      ]
+    },
+    {
+      "index": 6,
+      "scannerXYZ": [
+        41.03572899999563,
+        9.5427830000408,
+        3.0109960000000004
+      ],
+      "habitatXYZ": [
+        41.03572899999563,
+        3.0109960000000004,
+        -9.5427830000408
+      ]
+    },
+    {
+      "index": 7,
+      "scannerXYZ": [
+        43.74256199999945,
+        13.544840999878943,
+        4.248735999999999
+      ],
+      "habitatXYZ": [
+        43.74256199999945,
+        4.248735999999999,
+        -13.544840999878943
+      ]
+    },
+    {
+      "index": 8,
+      "scannerXYZ": [
+        47.62010999998893,
+        18.903119000140578,
+        4.33493
+      ],
+      "habitatXYZ": [
+        47.62010999998893,
+        4.33493,
+        -18.903119000140578
+      ]
+    },
+    {
+      "index": 9,
+      "scannerXYZ": [
+        51.93016099999659,
+        22.16122099990025,
+        4.65202
+      ],
+      "habitatXYZ": [
+        51.93016099999659,
+        4.65202,
+        -22.16122099990025
+      ]
+    },
+    {
+      "index": 10,
+      "scannerXYZ": [
+        58.112369999988005,
+        29.188341999892145,
+        4.99375
+      ],
+      "habitatXYZ": [
+        58.112369999988005,
+        4.99375,
+        -29.188341999892145
+      ]
+    },
+    {
+      "index": 11,
+      "scannerXYZ": [
+        69.75360900000669,
+        29.56027500005439,
+        4.868881
+      ],
+      "habitatXYZ": [
+        69.75360900000669,
+        4.868881,
+        -29.56027500005439
+      ]
+    },
+    {
+      "index": 12,
+      "scannerXYZ": [
+        70.67141000000993,
+        28.829808000009507,
+        5.09282
+      ],
+      "habitatXYZ": [
+        70.67141000000993,
+        5.09282,
+        -28.829808000009507
+      ]
+    },
+    {
+      "index": 13,
+      "scannerXYZ": [
+        71.27957199999946,
+        21.684348000213504,
+        4.797869
+      ],
+      "habitatXYZ": [
+        71.27957199999946,
+        4.797869,
+        -21.684348000213504
+      ]
+    },
+    {
+      "index": 14,
+      "scannerXYZ": [
+        72.47681399999419,
+        18.738832999952137,
+        4.623656
+      ],
+      "habitatXYZ": [
+        72.47681399999419,
+        4.623656,
+        -18.738832999952137
+      ]
+    },
+    {
+      "index": 15,
+      "scannerXYZ": [
+        74.28691900000558,
+        16.374158000107855,
+        4.671405999999999
+      ],
+      "habitatXYZ": [
+        74.28691900000558,
+        4.671405999999999,
+        -16.374158000107855
+      ]
+    },
+    {
+      "index": 16,
+      "scannerXYZ": [
+        78.04889700000058,
+        10.397441999986768,
+        4.87745
+      ],
+      "habitatXYZ": [
+        78.04889700000058,
+        4.87745,
+        -10.397441999986768
+      ]
+    },
+    {
+      "index": 17,
+      "scannerXYZ": [
+        86.04563899998902,
+        -4.506238999776542,
+        4.70838
+      ],
+      "habitatXYZ": [
+        86.04563899998902,
+        4.70838,
+        4.506238999776542
+      ]
+    },
+    {
+      "index": 18,
+      "scannerXYZ": [
+        85.59990699999616,
+        -6.092530999798328,
+        5.012783000000001
+      ],
+      "habitatXYZ": [
+        85.59990699999616,
+        5.012783000000001,
+        6.092530999798328
+      ]
+    },
+    {
+      "index": 19,
+      "scannerXYZ": [
+        86.34183499999926,
+        -8.380408000200987,
+        5.322977
+      ],
+      "habitatXYZ": [
+        86.34183499999926,
+        5.322977,
+        8.380408000200987
+      ]
+    },
+    {
+      "index": 20,
+      "scannerXYZ": [
+        68.46480600000359,
+        -14.073117000050843,
+        5.308311
+      ],
+      "habitatXYZ": [
+        68.46480600000359,
+        5.308311,
+        14.073117000050843
+      ]
+    },
+    {
+      "index": 21,
+      "scannerXYZ": [
+        54.59924300000421,
+        -19.074750000145286,
+        5.189158000000001
+      ],
+      "habitatXYZ": [
+        54.59924300000421,
+        5.189158000000001,
+        19.074750000145286
+      ]
+    },
+    {
+      "index": 22,
+      "scannerXYZ": [
+        15.345341999985976,
+        -25.87606899999082,
+        5.171671999999999
+      ],
+      "habitatXYZ": [
+        15.345341999985976,
+        5.171671999999999,
+        25.87606899999082
+      ]
+    },
+    {
+      "index": 23,
+      "scannerXYZ": [
+        -11.062246000015875,
+        -18.933896000031382,
+        5.034223000000001
+      ],
+      "habitatXYZ": [
+        -11.062246000015875,
+        5.034223000000001,
+        18.933896000031382
+      ]
+    },
+    {
+      "index": 24,
+      "scannerXYZ": [
+        -17.32704500001273,
+        -17.022756000049412,
+        5.446852
+      ],
+      "habitatXYZ": [
+        -17.32704500001273,
+        5.446852,
+        17.022756000049412
+      ]
+    },
+    {
+      "index": 25,
+      "scannerXYZ": [
+        -20.459101000014925,
+        -14.324512000195682,
+        5.466277
+      ],
+      "habitatXYZ": [
+        -20.459101000014925,
+        5.466277,
+        14.324512000195682
+      ]
+    },
+    {
+      "index": 26,
+      "scannerXYZ": [
+        -25.37210100001539,
+        -11.555652999784797,
+        5.657254999999999
+      ],
+      "habitatXYZ": [
+        -25.37210100001539,
+        5.657254999999999,
+        11.555652999784797
+      ]
+    },
+    {
+      "index": 27,
+      "scannerXYZ": [
+        -25.666293999995105,
+        -11.073900999967009,
+        5.998120999999999
+      ],
+      "habitatXYZ": [
+        -25.666293999995105,
+        5.998120999999999,
+        11.073900999967009
+      ]
+    },
+    {
+      "index": 28,
+      "scannerXYZ": [
+        -27.688767999992706,
+        -7.928826999850571,
+        6.141584999999999
+      ],
+      "habitatXYZ": [
+        -27.688767999992706,
+        6.141584999999999,
+        7.928826999850571
+      ]
+    },
+    {
+      "index": 30,
+      "scannerXYZ": [
+        -25.32797000001301,
+        0.11211899993941188,
+        4.971736999999999
+      ],
+      "habitatXYZ": [
+        -25.32797000001301,
+        4.971736999999999,
+        -0.11211899993941188
+      ]
+    },
+    {
+      "index": 31,
+      "scannerXYZ": [
+        -24.571030999999493,
+        7.076729999855161,
+        4.982799999999999
+      ],
+      "habitatXYZ": [
+        -24.571030999999493,
+        4.982799999999999,
+        -7.076729999855161
+      ]
+    },
+    {
+      "index": 32,
+      "scannerXYZ": [
+        -35.68641300001764,
+        0.8729900000616908,
+        4.951305
+      ],
+      "habitatXYZ": [
+        -35.68641300001764,
+        4.951305,
+        -0.8729900000616908
+      ]
+    }
+  ],
+  "routes": [
+    {
+      "ordinal": 1,
+      "routeId": "route_001_p01_to_p02",
+      "episodeRouteId": "route_001_p01_to_p02_v04",
+      "startIndex": 1,
+      "goalIndex": 2,
+      "tier": "base",
+      "corrected": false,
+      "models": {
+        "epoch1": {
+          "video": "/media/routes/epoch1/route_001_p01_to_p02.mp4",
+          "poster": "/media/contact-sheets/epoch1/route_001_p01_to_p02_v04.jpg",
+          "navErrorM": 0.25398582220077515,
+          "initialGoalDistanceM": 10.632420219664244,
+          "pathLengthM": 10.40000194311142,
+          "steps": 52,
+          "collisions": 0,
+          "stopReceived": true,
+          "success025m": false,
+          "success1m": true,
+          "terminationReason": "model_stop"
+        },
+        "epoch2": {
+          "video": "/media/routes/epoch2/route_001_p01_to_p02.mp4",
+          "poster": "/media/contact-sheets/epoch2/route_001_p01_to_p02_v04.jpg",
+          "navErrorM": 0.3321315050125122,
+          "initialGoalDistanceM": 10.632420219664244,
+          "pathLengthM": 10.399998396635056,
+          "steps": 52,
+          "collisions": 0,
+          "stopReceived": true,
+          "success025m": false,
+          "success1m": true,
+          "terminationReason": "model_stop"
+        }
+      }
+    },
+    {
+      "ordinal": 2,
+      "routeId": "route_002_p02_to_p03",
+      "episodeRouteId": "route_002_p02_to_p03_v04",
+      "startIndex": 2,
+      "goalIndex": 3,
+      "tier": "medium",
+      "corrected": false,
+      "models": {
+        "epoch1": {
+          "video": "/media/routes/epoch1/route_002_p02_to_p03.mp4",
+          "poster": "/media/contact-sheets/epoch1/route_002_p02_to_p03_v04.jpg",
+          "navErrorM": 0.22457559406757355,
+          "initialGoalDistanceM": 4.422842138538745,
+          "pathLengthM": 4.19999672472477,
+          "steps": 21,
+          "collisions": 0,
+          "stopReceived": true,
+          "success025m": true,
+          "success1m": true,
+          "terminationReason": "model_stop"
+        },
+        "epoch2": {
+          "video": "/media/routes/epoch2/route_002_p02_to_p03.mp4",
+          "poster": "/media/contact-sheets/epoch2/route_002_p02_to_p03_v04.jpg",
+          "navErrorM": 0.22814609110355377,
+          "initialGoalDistanceM": 4.422842138538745,
+          "pathLengthM": 4.1999980211257935,
+          "steps": 21,
+          "collisions": 0,
+          "stopReceived": true,
+          "success025m": true,
+          "success1m": true,
+          "terminationReason": "model_stop"
+        }
+      }
+    },
+    {
+      "ordinal": 3,
+      "routeId": "route_003_p03_to_p04",
+      "episodeRouteId": "route_003_p03_to_p04_v04",
+      "startIndex": 3,
+      "goalIndex": 4,
+      "tier": "medium",
+      "corrected": false,
+      "models": {
+        "epoch1": {
+          "video": "/media/routes/epoch1/route_003_p03_to_p04.mp4",
+          "poster": "/media/contact-sheets/epoch1/route_003_p03_to_p04_v04.jpg",
+          "navErrorM": 0.21222995221614838,
+          "initialGoalDistanceM": 4.806183316544635,
+          "pathLengthM": 4.599989175796509,
+          "steps": 23,
+          "collisions": 0,
+          "stopReceived": true,
+          "success025m": true,
+          "success1m": true,
+          "terminationReason": "model_stop"
+        },
+        "epoch2": {
+          "video": "/media/routes/epoch2/route_003_p03_to_p04.mp4",
+          "poster": "/media/contact-sheets/epoch2/route_003_p03_to_p04_v04.jpg",
+          "navErrorM": 0.22170743346214294,
+          "initialGoalDistanceM": 4.806183316544635,
+          "pathLengthM": 4.599996596574783,
+          "steps": 23,
+          "collisions": 0,
+          "stopReceived": true,
+          "success025m": true,
+          "success1m": true,
+          "terminationReason": "model_stop"
+        }
+      }
+    },
+    {
+      "ordinal": 4,
+      "routeId": "route_004_p04_to_p05",
+      "episodeRouteId": "route_004_p04_to_p05_v04",
+      "startIndex": 4,
+      "goalIndex": 5,
+      "tier": "hard",
+      "corrected": false,
+      "models": {
+        "epoch1": {
+          "video": "/media/routes/epoch1/route_004_p04_to_p05.mp4",
+          "poster": "/media/contact-sheets/epoch1/route_004_p04_to_p05_v04.jpg",
+          "navErrorM": 0.17034435272216797,
+          "initialGoalDistanceM": 5.365229279005789,
+          "pathLengthM": 5.199994578957558,
+          "steps": 26,
+          "collisions": 0,
+          "stopReceived": true,
+          "success025m": true,
+          "success1m": true,
+          "terminationReason": "model_stop"
+        },
+        "epoch2": {
+          "video": "/media/routes/epoch2/route_004_p04_to_p05.mp4",
+          "poster": "/media/contact-sheets/epoch2/route_004_p04_to_p05_v04.jpg",
+          "navErrorM": 0.17019754648208618,
+          "initialGoalDistanceM": 5.365229279005789,
+          "pathLengthM": 5.199998363852501,
+          "steps": 26,
+          "collisions": 0,
+          "stopReceived": true,
+          "success025m": true,
+          "success1m": true,
+          "terminationReason": "model_stop"
+        }
+      }
+    },
+    {
+      "ordinal": 5,
+      "routeId": "route_005_p05_to_p06",
+      "episodeRouteId": "route_005_p05_to_p06_v04",
+      "startIndex": 5,
+      "goalIndex": 6,
+      "tier": "medium",
+      "corrected": false,
+      "models": {
+        "epoch1": {
+          "video": "/media/routes/epoch1/route_005_p05_to_p06.mp4",
+          "poster": "/media/contact-sheets/epoch1/route_005_p05_to_p06_v04.jpg",
+          "navErrorM": 0.3028090000152588,
+          "initialGoalDistanceM": 5.488635574569148,
+          "pathLengthM": 5.200000986456871,
+          "steps": 26,
+          "collisions": 0,
+          "stopReceived": true,
+          "success025m": false,
+          "success1m": true,
+          "terminationReason": "model_stop"
+        },
+        "epoch2": {
+          "video": "/media/routes/epoch2/route_005_p05_to_p06.mp4",
+          "poster": "/media/contact-sheets/epoch2/route_005_p05_to_p06_v04.jpg",
+          "navErrorM": 0.32280540466308594,
+          "initialGoalDistanceM": 5.488635574569148,
+          "pathLengthM": 5.199999630451202,
+          "steps": 26,
+          "collisions": 0,
+          "stopReceived": true,
+          "success025m": false,
+          "success1m": true,
+          "terminationReason": "model_stop"
+        }
+      }
+    },
+    {
+      "ordinal": 6,
+      "routeId": "route_006_p06_to_p07",
+      "episodeRouteId": "route_006_p06_to_p07_v04",
+      "startIndex": 6,
+      "goalIndex": 7,
+      "tier": "medium",
+      "corrected": false,
+      "models": {
+        "epoch1": {
+          "video": "/media/routes/epoch1/route_006_p06_to_p07.mp4",
+          "poster": "/media/contact-sheets/epoch1/route_006_p06_to_p07_v04.jpg",
+          "navErrorM": 0.18603557348251343,
+          "initialGoalDistanceM": 4.98250430038751,
+          "pathLengthM": 4.800001844763756,
+          "steps": 24,
+          "collisions": 0,
+          "stopReceived": true,
+          "success025m": true,
+          "success1m": true,
+          "terminationReason": "model_stop"
+        },
+        "epoch2": {
+          "video": "/media/routes/epoch2/route_006_p06_to_p07.mp4",
+          "poster": "/media/contact-sheets/epoch2/route_006_p06_to_p07_v04.jpg",
+          "navErrorM": 0.19167499244213104,
+          "initialGoalDistanceM": 4.98250430038751,
+          "pathLengthM": 4.800003334879875,
+          "steps": 24,
+          "collisions": 0,
+          "stopReceived": true,
+          "success025m": true,
+          "success1m": true,
+          "terminationReason": "model_stop"
+        }
+      }
+    },
+    {
+      "ordinal": 7,
+      "routeId": "route_007_p07_to_p08",
+      "episodeRouteId": "route_007_p07_to_p08_v04",
+      "startIndex": 7,
+      "goalIndex": 8,
+      "tier": "base",
+      "corrected": false,
+      "models": {
+        "epoch1": {
+          "video": "/media/routes/epoch1/route_007_p07_to_p08.mp4",
+          "poster": "/media/contact-sheets/epoch1/route_007_p07_to_p08_v04.jpg",
+          "navErrorM": 0.18310512602329254,
+          "initialGoalDistanceM": 6.764854837157778,
+          "pathLengthM": 6.600003659725189,
+          "steps": 33,
+          "collisions": 0,
+          "stopReceived": true,
+          "success025m": true,
+          "success1m": true,
+          "terminationReason": "model_stop"
+        },
+        "epoch2": {
+          "video": "/media/routes/epoch2/route_007_p07_to_p08.mp4",
+          "poster": "/media/contact-sheets/epoch2/route_007_p07_to_p08_v04.jpg",
+          "navErrorM": 0.22726096212863922,
+          "initialGoalDistanceM": 6.764854837157778,
+          "pathLengthM": 6.600002869963646,
+          "steps": 33,
+          "collisions": 0,
+          "stopReceived": true,
+          "success025m": true,
+          "success1m": true,
+          "terminationReason": "model_stop"
+        }
+      }
+    },
+    {
+      "ordinal": 8,
+      "routeId": "route_008_p08_to_p09",
+      "episodeRouteId": "route_008_p08_to_p09_v04",
+      "startIndex": 8,
+      "goalIndex": 9,
+      "tier": "base",
+      "corrected": false,
+      "models": {
+        "epoch1": {
+          "video": "/media/routes/epoch1/route_008_p08_to_p09.mp4",
+          "poster": "/media/contact-sheets/epoch1/route_008_p08_to_p09_v04.jpg",
+          "navErrorM": 0.17332641780376434,
+          "initialGoalDistanceM": 5.553843748974217,
+          "pathLengthM": 5.400004893541336,
+          "steps": 27,
+          "collisions": 0,
+          "stopReceived": true,
+          "success025m": true,
+          "success1m": true,
+          "terminationReason": "model_stop"
+        },
+        "epoch2": {
+          "video": "/media/routes/epoch2/route_008_p08_to_p09.mp4",
+          "poster": "/media/contact-sheets/epoch2/route_008_p08_to_p09_v04.jpg",
+          "navErrorM": 0.2075265496969223,
+          "initialGoalDistanceM": 5.553843748974217,
+          "pathLengthM": 5.399994343519211,
+          "steps": 27,
+          "collisions": 0,
+          "stopReceived": true,
+          "success025m": true,
+          "success1m": true,
+          "terminationReason": "model_stop"
+        }
+      }
+    },
+    {
+      "ordinal": 9,
+      "routeId": "route_009_p09_to_p10",
+      "episodeRouteId": "route_009_p09_to_p10_v04",
+      "startIndex": 9,
+      "goalIndex": 10,
+      "tier": "medium",
+      "corrected": false,
+      "models": {
+        "epoch1": {
+          "video": "/media/routes/epoch1/route_009_p09_to_p10.mp4",
+          "poster": "/media/contact-sheets/epoch1/route_009_p09_to_p10_v04.jpg",
+          "navErrorM": 0.26079609990119934,
+          "initialGoalDistanceM": 9.513821158273785,
+          "pathLengthM": 9.400001376867294,
+          "steps": 47,
+          "collisions": 0,
+          "stopReceived": true,
+          "success025m": false,
+          "success1m": true,
+          "terminationReason": "model_stop"
+        },
+        "epoch2": {
+          "video": "/media/routes/epoch2/route_009_p09_to_p10.mp4",
+          "poster": "/media/contact-sheets/epoch2/route_009_p09_to_p10_v04.jpg",
+          "navErrorM": 0.13352899253368378,
+          "initialGoalDistanceM": 9.513821158273785,
+          "pathLengthM": 9.400040552020073,
+          "steps": 47,
+          "collisions": 0,
+          "stopReceived": true,
+          "success025m": true,
+          "success1m": true,
+          "terminationReason": "model_stop"
+        }
+      }
+    },
+    {
+      "ordinal": 10,
+      "routeId": "route_010_p10_to_p11",
+      "episodeRouteId": "route_010_p10_to_p11_v04",
+      "startIndex": 10,
+      "goalIndex": 11,
+      "tier": "hard",
+      "corrected": false,
+      "models": {
+        "epoch1": {
+          "video": "/media/routes/epoch1/route_010_p10_to_p11.mp4",
+          "poster": "/media/contact-sheets/epoch1/route_010_p10_to_p11_v04.jpg",
+          "navErrorM": 3.89778733253479,
+          "initialGoalDistanceM": 11.80103622834071,
+          "pathLengthM": 9.1085389778018,
+          "steps": 91,
+          "collisions": 56,
+          "stopReceived": false,
+          "success025m": false,
+          "success1m": false,
+          "terminationReason": "stuck"
+        },
+        "epoch2": {
+          "video": "/media/routes/epoch2/route_010_p10_to_p11.mp4",
+          "poster": "/media/contact-sheets/epoch2/route_010_p10_to_p11_v04.jpg",
+          "navErrorM": 0.2646021842956543,
+          "initialGoalDistanceM": 11.80103622834071,
+          "pathLengthM": 13.287396609783173,
+          "steps": 67,
+          "collisions": 4,
+          "stopReceived": true,
+          "success025m": false,
+          "success1m": true,
+          "terminationReason": "model_stop"
+        }
+      }
+    },
+    {
+      "ordinal": 11,
+      "routeId": "route_011_p11_to_p12",
+      "episodeRouteId": "route_011_p11_to_p12_v04",
+      "startIndex": 11,
+      "goalIndex": 12,
+      "tier": "hard",
+      "corrected": false,
+      "models": {
+        "epoch1": {
+          "video": "/media/routes/epoch1/route_011_p11_to_p12.mp4",
+          "poster": "/media/contact-sheets/epoch1/route_011_p11_to_p12_v04.jpg",
+          "navErrorM": 0.1282397210597992,
+          "initialGoalDistanceM": 1.3267745319567221,
+          "pathLengthM": 1.2000017613172531,
+          "steps": 6,
+          "collisions": 0,
+          "stopReceived": true,
+          "success025m": true,
+          "success1m": true,
+          "terminationReason": "model_stop"
+        },
+        "epoch2": {
+          "video": "/media/routes/epoch2/route_011_p11_to_p12.mp4",
+          "poster": "/media/contact-sheets/epoch2/route_011_p11_to_p12_v04.jpg",
+          "navErrorM": 0.12711143493652344,
+          "initialGoalDistanceM": 1.3267745319567221,
+          "pathLengthM": 1.200004830956459,
+          "steps": 6,
+          "collisions": 0,
+          "stopReceived": true,
+          "success025m": true,
+          "success1m": true,
+          "terminationReason": "model_stop"
+        }
+      }
+    },
+    {
+      "ordinal": 12,
+      "routeId": "route_012_p12_to_p13",
+      "episodeRouteId": "route_012_p12_to_p13_v04",
+      "startIndex": 12,
+      "goalIndex": 13,
+      "tier": "medium",
+      "corrected": true,
+      "models": {
+        "epoch1": {
+          "video": "/media/routes/epoch1/route_012_p12_to_p13.mp4",
+          "poster": "/media/contact-sheets/epoch1/route_012_p12_to_p13_v04.jpg",
+          "navErrorM": 0.6786659955978394,
+          "initialGoalDistanceM": 7.288056430117018,
+          "pathLengthM": 6.829406186938286,
+          "steps": 79,
+          "collisions": 46,
+          "stopReceived": false,
+          "success025m": false,
+          "success1m": false,
+          "terminationReason": "stuck"
+        },
+        "epoch2": {
+          "video": "/media/routes/epoch2/route_012_p12_to_p13.mp4",
+          "poster": "/media/contact-sheets/epoch2/route_012_p12_to_p13_v04.jpg",
+          "navErrorM": 0.274488627910614,
+          "initialGoalDistanceM": 7.288056430117018,
+          "pathLengthM": 7.600007489323616,
+          "steps": 38,
+          "collisions": 0,
+          "stopReceived": true,
+          "success025m": false,
+          "success1m": true,
+          "terminationReason": "model_stop"
+        }
+      }
+    },
+    {
+      "ordinal": 13,
+      "routeId": "route_013_p13_to_p14",
+      "episodeRouteId": "route_013_p13_to_p14_v04",
+      "startIndex": 13,
+      "goalIndex": 14,
+      "tier": "base",
+      "corrected": false,
+      "models": {
+        "epoch1": {
+          "video": "/media/routes/epoch1/route_013_p13_to_p14.mp4",
+          "poster": "/media/contact-sheets/epoch1/route_013_p13_to_p14_v04.jpg",
+          "navErrorM": 0.3310556709766388,
+          "initialGoalDistanceM": 3.3310383082590036,
+          "pathLengthM": 3.000009149312973,
+          "steps": 15,
+          "collisions": 0,
+          "stopReceived": true,
+          "success025m": false,
+          "success1m": true,
+          "terminationReason": "model_stop"
+        },
+        "epoch2": {
+          "video": "/media/routes/epoch2/route_013_p13_to_p14.mp4",
+          "poster": "/media/contact-sheets/epoch2/route_013_p13_to_p14_v04.jpg",
+          "navErrorM": 0.3313889503479004,
+          "initialGoalDistanceM": 3.3310383082590036,
+          "pathLengthM": 3.0000014901161194,
+          "steps": 15,
+          "collisions": 0,
+          "stopReceived": true,
+          "success025m": false,
+          "success1m": true,
+          "terminationReason": "model_stop"
+        }
+      }
+    },
+    {
+      "ordinal": 14,
+      "routeId": "route_014_p14_to_p15",
+      "episodeRouteId": "route_014_p14_to_p15_v04",
+      "startIndex": 14,
+      "goalIndex": 15,
+      "tier": "base",
+      "corrected": false,
+      "models": {
+        "epoch1": {
+          "video": "/media/routes/epoch1/route_014_p14_to_p15.mp4",
+          "poster": "/media/contact-sheets/epoch1/route_014_p14_to_p15_v04.jpg",
+          "navErrorM": 0.13059262931346893,
+          "initialGoalDistanceM": 3.1295419473360626,
+          "pathLengthM": 3.0000037252902985,
+          "steps": 15,
+          "collisions": 0,
+          "stopReceived": true,
+          "success025m": true,
+          "success1m": true,
+          "terminationReason": "model_stop"
+        },
+        "epoch2": {
+          "video": "/media/routes/epoch2/route_014_p14_to_p15.mp4",
+          "poster": "/media/contact-sheets/epoch2/route_014_p14_to_p15_v04.jpg",
+          "navErrorM": 0.1295984983444214,
+          "initialGoalDistanceM": 3.1295419473360626,
+          "pathLengthM": 3.000001981854439,
+          "steps": 15,
+          "collisions": 0,
+          "stopReceived": true,
+          "success025m": true,
+          "success1m": true,
+          "terminationReason": "model_stop"
+        }
+      }
+    },
+    {
+      "ordinal": 15,
+      "routeId": "route_015_p15_to_p16",
+      "episodeRouteId": "route_015_p15_to_p16_v04",
+      "startIndex": 15,
+      "goalIndex": 16,
+      "tier": "base",
+      "corrected": false,
+      "models": {
+        "epoch1": {
+          "video": "/media/routes/epoch1/route_015_p15_to_p16.mp4",
+          "poster": "/media/contact-sheets/epoch1/route_015_p15_to_p16_v04.jpg",
+          "navErrorM": 0.21301349997520447,
+          "initialGoalDistanceM": 7.2128221903088665,
+          "pathLengthM": 6.999991446733475,
+          "steps": 35,
+          "collisions": 0,
+          "stopReceived": true,
+          "success025m": true,
+          "success1m": true,
+          "terminationReason": "model_stop"
+        },
+        "epoch2": {
+          "video": "/media/routes/epoch2/route_015_p15_to_p16.mp4",
+          "poster": "/media/contact-sheets/epoch2/route_015_p15_to_p16_v04.jpg",
+          "navErrorM": 0.23132644593715668,
+          "initialGoalDistanceM": 7.2128221903088665,
+          "pathLengthM": 7.000015497207642,
+          "steps": 35,
+          "collisions": 0,
+          "stopReceived": true,
+          "success025m": true,
+          "success1m": true,
+          "terminationReason": "model_stop"
+        }
+      }
+    },
+    {
+      "ordinal": 16,
+      "routeId": "route_016_p16_to_p17",
+      "episodeRouteId": "route_016_p16_to_p17_v04",
+      "startIndex": 16,
+      "goalIndex": 17,
+      "tier": "medium",
+      "corrected": false,
+      "models": {
+        "epoch1": {
+          "video": "/media/routes/epoch1/route_016_p16_to_p17.mp4",
+          "poster": "/media/contact-sheets/epoch1/route_016_p16_to_p17_v04.jpg",
+          "navErrorM": 0.3405647575855255,
+          "initialGoalDistanceM": 17.06382927279671,
+          "pathLengthM": 16.797394171357155,
+          "steps": 84,
+          "collisions": 1,
+          "stopReceived": true,
+          "success025m": false,
+          "success1m": true,
+          "terminationReason": "model_stop"
+        },
+        "epoch2": {
+          "video": "/media/routes/epoch2/route_016_p16_to_p17.mp4",
+          "poster": "/media/contact-sheets/epoch2/route_016_p16_to_p17_v04.jpg",
+          "navErrorM": 0.29988187551498413,
+          "initialGoalDistanceM": 17.06382927279671,
+          "pathLengthM": 16.7989963889122,
+          "steps": 84,
+          "collisions": 2,
+          "stopReceived": true,
+          "success025m": false,
+          "success1m": true,
+          "terminationReason": "model_stop"
+        }
+      }
+    },
+    {
+      "ordinal": 17,
+      "routeId": "route_017_p17_to_p18",
+      "episodeRouteId": "route_017_p17_to_p18_v04",
+      "startIndex": 17,
+      "goalIndex": 18,
+      "tier": "hard",
+      "corrected": false,
+      "models": {
+        "epoch1": {
+          "video": "/media/routes/epoch1/route_017_p17_to_p18.mp4",
+          "poster": "/media/contact-sheets/epoch1/route_017_p17_to_p18_v04.jpg",
+          "navErrorM": 0.20305487513542175,
+          "initialGoalDistanceM": 1.8005032571203519,
+          "pathLengthM": 1.600001722574234,
+          "steps": 8,
+          "collisions": 0,
+          "stopReceived": true,
+          "success025m": true,
+          "success1m": true,
+          "terminationReason": "model_stop"
+        },
+        "epoch2": {
+          "video": "/media/routes/epoch2/route_017_p17_to_p18.mp4",
+          "poster": "/media/contact-sheets/epoch2/route_017_p17_to_p18_v04.jpg",
+          "navErrorM": 0.20126207172870636,
+          "initialGoalDistanceM": 1.8005032571203519,
+          "pathLengthM": 1.6000020205974579,
+          "steps": 8,
+          "collisions": 0,
+          "stopReceived": true,
+          "success025m": true,
+          "success1m": true,
+          "terminationReason": "model_stop"
+        }
+      }
+    },
+    {
+      "ordinal": 18,
+      "routeId": "route_018_p18_to_p19",
+      "episodeRouteId": "route_018_p18_to_p19_v04",
+      "startIndex": 18,
+      "goalIndex": 19,
+      "tier": "hard",
+      "corrected": false,
+      "models": {
+        "epoch1": {
+          "video": "/media/routes/epoch1/route_018_p18_to_p19.mp4",
+          "poster": "/media/contact-sheets/epoch1/route_018_p18_to_p19_v04.jpg",
+          "navErrorM": 0.3194543421268463,
+          "initialGoalDistanceM": 2.580573049427589,
+          "pathLengthM": 3.9385554268956184,
+          "steps": 24,
+          "collisions": 13,
+          "stopReceived": true,
+          "success025m": false,
+          "success1m": true,
+          "terminationReason": "model_stop"
+        },
+        "epoch2": {
+          "video": "/media/routes/epoch2/route_018_p18_to_p19.mp4",
+          "poster": "/media/contact-sheets/epoch2/route_018_p18_to_p19_v04.jpg",
+          "navErrorM": 0.31359702348709106,
+          "initialGoalDistanceM": 2.580573049427589,
+          "pathLengthM": 4.063767790794373,
+          "steps": 25,
+          "collisions": 14,
+          "stopReceived": true,
+          "success025m": false,
+          "success1m": true,
+          "terminationReason": "model_stop"
+        }
+      }
+    },
+    {
+      "ordinal": 19,
+      "routeId": "route_019_p19_to_p20",
+      "episodeRouteId": "route_019_p19_to_p20_v04",
+      "startIndex": 19,
+      "goalIndex": 20,
+      "tier": "medium",
+      "corrected": false,
+      "models": {
+        "epoch1": {
+          "video": "/media/routes/epoch1/route_019_p19_to_p20.mp4",
+          "poster": "/media/contact-sheets/epoch1/route_019_p19_to_p20_v04.jpg",
+          "navErrorM": 0.36556997895240784,
+          "initialGoalDistanceM": 18.91179758104726,
+          "pathLengthM": 18.800026401877403,
+          "steps": 94,
+          "collisions": 0,
+          "stopReceived": true,
+          "success025m": false,
+          "success1m": true,
+          "terminationReason": "model_stop"
+        },
+        "epoch2": {
+          "video": "/media/routes/epoch2/route_019_p19_to_p20.mp4",
+          "poster": "/media/contact-sheets/epoch2/route_019_p19_to_p20_v04.jpg",
+          "navErrorM": 0.2750106155872345,
+          "initialGoalDistanceM": 18.91179758104726,
+          "pathLengthM": 18.999998539686203,
+          "steps": 95,
+          "collisions": 0,
+          "stopReceived": true,
+          "success025m": false,
+          "success1m": true,
+          "terminationReason": "model_stop"
+        }
+      }
+    },
+    {
+      "ordinal": 20,
+      "routeId": "route_020_p20_to_p21",
+      "episodeRouteId": "route_020_p20_to_p21_v04",
+      "startIndex": 20,
+      "goalIndex": 21,
+      "tier": "medium",
+      "corrected": false,
+      "models": {
+        "epoch1": {
+          "video": "/media/routes/epoch1/route_020_p20_to_p21.mp4",
+          "poster": "/media/contact-sheets/epoch1/route_020_p20_to_p21_v04.jpg",
+          "navErrorM": 0.30342796444892883,
+          "initialGoalDistanceM": 14.890424388273598,
+          "pathLengthM": 14.800004929304123,
+          "steps": 74,
+          "collisions": 0,
+          "stopReceived": true,
+          "success025m": false,
+          "success1m": true,
+          "terminationReason": "model_stop"
+        },
+        "epoch2": {
+          "video": "/media/routes/epoch2/route_020_p20_to_p21.mp4",
+          "poster": "/media/contact-sheets/epoch2/route_020_p20_to_p21_v04.jpg",
+          "navErrorM": 0.3538399040699005,
+          "initialGoalDistanceM": 14.890424388273598,
+          "pathLengthM": 14.800008922815323,
+          "steps": 74,
+          "collisions": 0,
+          "stopReceived": true,
+          "success025m": false,
+          "success1m": true,
+          "terminationReason": "model_stop"
+        }
+      }
+    },
+    {
+      "ordinal": 21,
+      "routeId": "route_021_p21_to_p22",
+      "episodeRouteId": "route_021_p21_to_p22_v04",
+      "startIndex": 21,
+      "goalIndex": 22,
+      "tier": "medium",
+      "corrected": false,
+      "models": {
+        "epoch1": {
+          "video": "/media/routes/epoch1/route_021_p21_to_p22.mp4",
+          "poster": "/media/contact-sheets/epoch1/route_021_p21_to_p22_v04.jpg",
+          "navErrorM": 0.322134405374527,
+          "initialGoalDistanceM": 39.988884076145574,
+          "pathLengthM": 40.19998714327812,
+          "steps": 201,
+          "collisions": 0,
+          "stopReceived": true,
+          "success025m": false,
+          "success1m": true,
+          "terminationReason": "model_stop"
+        },
+        "epoch2": {
+          "video": "/media/routes/epoch2/route_021_p21_to_p22.mp4",
+          "poster": "/media/contact-sheets/epoch2/route_021_p21_to_p22_v04.jpg",
+          "navErrorM": 0.28498756885528564,
+          "initialGoalDistanceM": 39.988884076145574,
+          "pathLengthM": 40.600014597177505,
+          "steps": 203,
+          "collisions": 0,
+          "stopReceived": true,
+          "success025m": false,
+          "success1m": true,
+          "terminationReason": "model_stop"
+        }
+      }
+    },
+    {
+      "ordinal": 22,
+      "routeId": "route_022_p22_to_p23",
+      "episodeRouteId": "route_022_p22_to_p23_v04",
+      "startIndex": 22,
+      "goalIndex": 23,
+      "tier": "hard",
+      "corrected": false,
+      "models": {
+        "epoch1": {
+          "video": "/media/routes/epoch1/route_022_p22_to_p23.mp4",
+          "poster": "/media/contact-sheets/epoch1/route_022_p22_to_p23_v04.jpg",
+          "navErrorM": 0.31479576230049133,
+          "initialGoalDistanceM": 27.452079895913844,
+          "pathLengthM": 27.5999962836504,
+          "steps": 138,
+          "collisions": 0,
+          "stopReceived": true,
+          "success025m": false,
+          "success1m": true,
+          "terminationReason": "model_stop"
+        },
+        "epoch2": {
+          "video": "/media/routes/epoch2/route_022_p22_to_p23.mp4",
+          "poster": "/media/contact-sheets/epoch2/route_022_p22_to_p23_v04.jpg",
+          "navErrorM": 0.38090503215789795,
+          "initialGoalDistanceM": 27.452079895913844,
+          "pathLengthM": 27.600001633167267,
+          "steps": 138,
+          "collisions": 0,
+          "stopReceived": true,
+          "success025m": false,
+          "success1m": true,
+          "terminationReason": "model_stop"
+        }
+      }
+    },
+    {
+      "ordinal": 23,
+      "routeId": "route_023_p23_to_p24",
+      "episodeRouteId": "route_023_p23_to_p24_v04",
+      "startIndex": 23,
+      "goalIndex": 24,
+      "tier": "base",
+      "corrected": false,
+      "models": {
+        "epoch1": {
+          "video": "/media/routes/epoch1/route_023_p23_to_p24.mp4",
+          "poster": "/media/contact-sheets/epoch1/route_023_p23_to_p24_v04.jpg",
+          "navErrorM": 0.32793837785720825,
+          "initialGoalDistanceM": 6.700565834400629,
+          "pathLengthM": 6.399999991059303,
+          "steps": 32,
+          "collisions": 0,
+          "stopReceived": true,
+          "success025m": false,
+          "success1m": true,
+          "terminationReason": "model_stop"
+        },
+        "epoch2": {
+          "video": "/media/routes/epoch2/route_023_p23_to_p24.mp4",
+          "poster": "/media/contact-sheets/epoch2/route_023_p23_to_p24_v04.jpg",
+          "navErrorM": 0.35183796286582947,
+          "initialGoalDistanceM": 6.700565834400629,
+          "pathLengthM": 6.400001361966133,
+          "steps": 32,
+          "collisions": 0,
+          "stopReceived": true,
+          "success025m": false,
+          "success1m": true,
+          "terminationReason": "model_stop"
+        }
+      }
+    },
+    {
+      "ordinal": 24,
+      "routeId": "route_024_p24_to_p25",
+      "episodeRouteId": "route_024_p24_to_p25_v04",
+      "startIndex": 24,
+      "goalIndex": 25,
+      "tier": "hard",
+      "corrected": false,
+      "models": {
+        "epoch1": {
+          "video": "/media/routes/epoch1/route_024_p24_to_p25.mp4",
+          "poster": "/media/contact-sheets/epoch1/route_024_p24_to_p25_v04.jpg",
+          "navErrorM": 0.3047700822353363,
+          "initialGoalDistanceM": 4.24522025114952,
+          "pathLengthM": 6.27692155353725,
+          "steps": 37,
+          "collisions": 13,
+          "stopReceived": true,
+          "success025m": false,
+          "success1m": true,
+          "terminationReason": "model_stop"
+        },
+        "epoch2": {
+          "video": "/media/routes/epoch2/route_024_p24_to_p25.mp4",
+          "poster": "/media/contact-sheets/epoch2/route_024_p24_to_p25_v04.jpg",
+          "navErrorM": 0.2817438244819641,
+          "initialGoalDistanceM": 4.24522025114952,
+          "pathLengthM": 6.431645138189197,
+          "steps": 38,
+          "collisions": 14,
+          "stopReceived": true,
+          "success025m": false,
+          "success1m": true,
+          "terminationReason": "model_stop"
+        }
+      }
+    },
+    {
+      "ordinal": 25,
+      "routeId": "route_025_p25_to_p26",
+      "episodeRouteId": "route_025_p25_to_p26_v04",
+      "startIndex": 25,
+      "goalIndex": 26,
+      "tier": "hard",
+      "corrected": true,
+      "models": {
+        "epoch1": {
+          "video": "/media/routes/epoch1/route_025_p25_to_p26.mp4",
+          "poster": "/media/contact-sheets/epoch1/route_025_p25_to_p26_v04.jpg",
+          "navErrorM": 0.28168362379074097,
+          "initialGoalDistanceM": 5.790383055333819,
+          "pathLengthM": 5.400001659989357,
+          "steps": 27,
+          "collisions": 0,
+          "stopReceived": true,
+          "success025m": false,
+          "success1m": true,
+          "terminationReason": "model_stop"
+        },
+        "epoch2": {
+          "video": "/media/routes/epoch2/route_025_p25_to_p26.mp4",
+          "poster": "/media/contact-sheets/epoch2/route_025_p25_to_p26_v04.jpg",
+          "navErrorM": 0.22869254648685455,
+          "initialGoalDistanceM": 5.790383055333819,
+          "pathLengthM": 5.599999159574509,
+          "steps": 28,
+          "collisions": 0,
+          "stopReceived": true,
+          "success025m": true,
+          "success1m": true,
+          "terminationReason": "model_stop"
+        }
+      }
+    },
+    {
+      "ordinal": 26,
+      "routeId": "route_026_p26_to_p27",
+      "episodeRouteId": "route_026_p26_to_p27_v04",
+      "startIndex": 26,
+      "goalIndex": 27,
+      "tier": "hard",
+      "corrected": false,
+      "models": {
+        "epoch1": {
+          "video": "/media/routes/epoch1/route_026_p26_to_p27.mp4",
+          "poster": "/media/contact-sheets/epoch1/route_026_p26_to_p27_v04.jpg",
+          "navErrorM": 0.12221205234527588,
+          "initialGoalDistanceM": 0.7214415145387743,
+          "pathLengthM": 0.5999990105628967,
+          "steps": 3,
+          "collisions": 0,
+          "stopReceived": true,
+          "success025m": true,
+          "success1m": true,
+          "terminationReason": "model_stop"
+        },
+        "epoch2": {
+          "video": "/media/routes/epoch2/route_026_p26_to_p27.mp4",
+          "poster": "/media/contact-sheets/epoch2/route_026_p26_to_p27_v04.jpg",
+          "navErrorM": 0.12220922112464905,
+          "initialGoalDistanceM": 0.7214415145387743,
+          "pathLengthM": 0.6000005006790161,
+          "steps": 3,
+          "collisions": 0,
+          "stopReceived": true,
+          "success025m": true,
+          "success1m": true,
+          "terminationReason": "model_stop"
+        }
+      }
+    },
+    {
+      "ordinal": 27,
+      "routeId": "route_027_p27_to_p28",
+      "episodeRouteId": "route_027_p27_to_p28_v04",
+      "startIndex": 27,
+      "goalIndex": 28,
+      "tier": "base",
+      "corrected": false,
+      "models": {
+        "epoch1": {
+          "video": "/media/routes/epoch1/route_027_p27_to_p28.mp4",
+          "poster": "/media/contact-sheets/epoch1/route_027_p27_to_p28_v04.jpg",
+          "navErrorM": 0.29227790236473083,
+          "initialGoalDistanceM": 3.890521789501891,
+          "pathLengthM": 3.59999880194664,
+          "steps": 18,
+          "collisions": 0,
+          "stopReceived": true,
+          "success025m": false,
+          "success1m": true,
+          "terminationReason": "model_stop"
+        },
+        "epoch2": {
+          "video": "/media/routes/epoch2/route_027_p27_to_p28.mp4",
+          "poster": "/media/contact-sheets/epoch2/route_027_p27_to_p28_v04.jpg",
+          "navErrorM": 0.29697757959365845,
+          "initialGoalDistanceM": 3.890521789501891,
+          "pathLengthM": 3.6000006943941116,
+          "steps": 18,
+          "collisions": 0,
+          "stopReceived": true,
+          "success025m": false,
+          "success1m": true,
+          "terminationReason": "model_stop"
+        }
+      }
+    },
+    {
+      "ordinal": 28,
+      "routeId": "route_028_p28_to_p30",
+      "episodeRouteId": "route_028_p28_to_p30_v04",
+      "startIndex": 28,
+      "goalIndex": 30,
+      "tier": "hard",
+      "corrected": false,
+      "models": {
+        "epoch1": {
+          "video": "/media/routes/epoch1/route_028_p28_to_p30.mp4",
+          "poster": "/media/contact-sheets/epoch1/route_028_p28_to_p30_v04.jpg",
+          "navErrorM": 7.954813003540039,
+          "initialGoalDistanceM": 8.520645083894763,
+          "pathLengthM": 1.0489074103534222,
+          "steps": 50,
+          "collisions": 46,
+          "stopReceived": false,
+          "success025m": false,
+          "success1m": false,
+          "terminationReason": "stuck"
+        },
+        "epoch2": {
+          "video": "/media/routes/epoch2/route_028_p28_to_p30.mp4",
+          "poster": "/media/contact-sheets/epoch2/route_028_p28_to_p30_v04.jpg",
+          "navErrorM": 0.32645973563194275,
+          "initialGoalDistanceM": 8.520645083894763,
+          "pathLengthM": 9.312803328037262,
+          "steps": 49,
+          "collisions": 7,
+          "stopReceived": true,
+          "success025m": false,
+          "success1m": true,
+          "terminationReason": "model_stop"
+        }
+      }
+    },
+    {
+      "ordinal": 29,
+      "routeId": "route_029_p30_to_p31",
+      "episodeRouteId": "route_029_p30_to_p31_v04",
+      "startIndex": 30,
+      "goalIndex": 31,
+      "tier": "base",
+      "corrected": false,
+      "models": {
+        "epoch1": {
+          "video": "/media/routes/epoch1/route_029_p30_to_p31.mp4",
+          "poster": "/media/contact-sheets/epoch1/route_029_p30_to_p31_v04.jpg",
+          "navErrorM": 0.16111381351947784,
+          "initialGoalDistanceM": 7.156322835176457,
+          "pathLengthM": 7.000000312924385,
+          "steps": 35,
+          "collisions": 0,
+          "stopReceived": true,
+          "success025m": true,
+          "success1m": true,
+          "terminationReason": "model_stop"
+        },
+        "epoch2": {
+          "video": "/media/routes/epoch2/route_029_p30_to_p31.mp4",
+          "poster": "/media/contact-sheets/epoch2/route_029_p30_to_p31_v04.jpg",
+          "navErrorM": 0.19013725221157074,
+          "initialGoalDistanceM": 7.156322835176457,
+          "pathLengthM": 7.00000087916851,
+          "steps": 35,
+          "collisions": 0,
+          "stopReceived": true,
+          "success025m": true,
+          "success1m": true,
+          "terminationReason": "model_stop"
+        }
+      }
+    },
+    {
+      "ordinal": 30,
+      "routeId": "route_030_p31_to_p32",
+      "episodeRouteId": "route_030_p31_to_p32_v04",
+      "startIndex": 31,
+      "goalIndex": 32,
+      "tier": "base",
+      "corrected": false,
+      "models": {
+        "epoch1": {
+          "video": "/media/routes/epoch1/route_030_p31_to_p32.mp4",
+          "poster": "/media/contact-sheets/epoch1/route_030_p31_to_p32_v04.jpg",
+          "navErrorM": 0.3140914738178253,
+          "initialGoalDistanceM": 12.89328583419518,
+          "pathLengthM": 13.399999350309372,
+          "steps": 67,
+          "collisions": 0,
+          "stopReceived": true,
+          "success025m": false,
+          "success1m": true,
+          "terminationReason": "model_stop"
+        },
+        "epoch2": {
+          "video": "/media/routes/epoch2/route_030_p31_to_p32.mp4",
+          "poster": "/media/contact-sheets/epoch2/route_030_p31_to_p32_v04.jpg",
+          "navErrorM": 0.35013753175735474,
+          "initialGoalDistanceM": 12.89328583419518,
+          "pathLengthM": 13.2000020891428,
+          "steps": 66,
+          "collisions": 0,
+          "stopReceived": true,
+          "success025m": false,
+          "success1m": true,
+          "terminationReason": "model_stop"
+        }
+      }
+    }
+  ]
+}

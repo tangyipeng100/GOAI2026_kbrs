@@ -1,0 +1,11 @@
+{
+  "routes": 230,
+  "baseSegments": 30,
+  "checkpoints": 31,
+  "trainRoutes": 200,
+  "valRoutes": 30,
+  "trainSamples": 6140,
+  "valSamples": 930,
+  "imagesPerSample": 23,
+  "instruction": "Proceed to the selected goal point, use the red heart marker as a visual cue when visible, and stop precisely at the goal."
+}

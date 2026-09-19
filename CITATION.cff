@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "If you use the GoalPoint coordinate transform, route schema, or evaluation tools, please cite this project."
+title: "恐怖如斯·视觉语义注入具身导航巡检方案"
+type: software
+authors:
+  - name: "恐怖如斯战队"
+version: 0.1.0
+date-released: 2026-09-19
+license: Apache-2.0
+abstract: "A reproducible demonstration and evaluation toolkit for waypoint-by-waypoint GoalPoint navigation in a Gaussian digital twin of an industrial campus."
+keywords:
+  - embodied navigation
+  - vision-language navigation
+  - gaussian splatting
+  - goal point
+  - robot patrol

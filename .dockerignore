@@ -1,0 +1,9 @@
+node_modules
+node_modules_partial_*
+.git
+.next
+.vinext
+.wrangler
+.sites-runtime
+assets-private
+*.log
