@@ -4,9 +4,21 @@
 
 可靠定位助力视觉语言导航落地园区巡检。我们以真实扫描构建高保真高斯场景，结合地图定位、语义指令与局部 Goal Point，让山猫 S10 按顺序完成园区内的逐站导航任务。VLN 模型支持前向单视图或左／前／右三视图纯视觉观测，并利用多帧信息决策；精确到点所需的地图位姿由定位模块提供。
 
-**[打开展示主页](https://tangyipeng100.github.io/GOAI2026_kbrs/)** · **[查看高斯场景](https://lcc-viewer.xgrids.cloud/pub/9e0212b2-49ff-419e-8c24-2c8a21e8bcc5)** · **[观看完整方案视频](public/media/goai_yungu_vln_overview_v2_64s.mp4)** · **[魔搭版图文说明](modelscope_release/README.md)**
+**[打开展示主页](https://tangyipeng100.github.io/GOAI2026_kbrs/)** · **[GOAI 大赛官网](https://www.goaihz.com/)** · **[具身未来赛道](https://www.goaihz.com/tracks?track=embodied)** · **[查看高斯场景](https://lcc-viewer.xgrids.cloud/pub/9e0212b2-49ff-419e-8c24-2c8a21e8bcc5)** · **[观看完整方案视频](public/media/goai_yungu_vln_overview_v2_64s.mp4)** · **[魔搭版图文说明](modelscope_release/README.md)**
 
 [![园区赛场与方案视频封面](public/media/goai_yungu_vln_overview_v2_poster.jpg)](public/media/goai_yungu_vln_overview_v2_64s.mp4)
+
+## 赛事荣誉
+
+恐怖如斯战队在 **2026 世界人工智能开源大赛（GOAI）具身未来赛道“产业园区全地形巡逻挑战赛”中获得亚军**，并获得 **GOAI 算法创新奖**。
+
+![恐怖如斯战队 GOAI 2026 亚军、算法创新奖及现场第 2 名榜单](public/media/awards/goai-2026-awards-showcase-highlighted.png)
+
+| 亚军获奖证书 | GOAI 算法创新奖 | 亚军奖杯 |
+| --- | --- | --- |
+| <img src="public/media/awards/goai-runner-up-certificate-original.jpg" alt="亚军获奖证书原始照片" width="300"> | <img src="public/media/awards/goai-algorithm-innovation-award-original.jpg" alt="GOAI 算法创新奖证书原始照片" width="300"> | <img src="public/media/awards/goai-runner-up-trophy-original.jpg" alt="亚军奖杯原始照片" width="300"> |
+
+[查看现场路演榜单原始照片](public/media/awards/goai-roadshow-ranking-original.jpg)
 
 ## 导航方案
 

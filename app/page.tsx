@@ -1,4 +1,5 @@
 import {
+  Award,
   ArrowDown,
   Box,
   ExternalLink,
@@ -8,6 +9,7 @@ import {
   ScanLine,
   ShieldCheck,
   Target,
+  Trophy,
 } from "lucide-react";
 import Image from "next/image";
 import { RouteExplorer } from "@/components/route-explorer";
@@ -15,6 +17,8 @@ import { publicPath } from "@/lib/public-path";
 
 const sceneUrl = "https://lcc-viewer.xgrids.cloud/pub/9e0212b2-49ff-419e-8c24-2c8a21e8bcc5";
 const repositoryUrl = "https://github.com/tangyipeng100/GOAI2026_kbrs";
+const competitionUrl = "https://www.goaihz.com/";
+const trackUrl = "https://www.goaihz.com/tracks?track=embodied";
 
 export default function Home() {
   return (
@@ -28,6 +32,7 @@ export default function Home() {
           </span>
         </a>
         <nav aria-label="页面导航">
+          <a href="#awards">荣誉</a>
           <a href="#system">方案</a>
           <a href="#film">影片</a>
           <a href="#scene">场景</a>
@@ -49,6 +54,10 @@ export default function Home() {
           <div className="hero-shade" />
           <div className="hero-copy">
             <p className="event-line">赛道四 · 具身未来 / 赛题二 · 产业园区全地形巡逻挑战赛</p>
+            <a className="hero-award" href="#awards">
+              <Trophy size={17} aria-hidden="true" />
+              <span>GOAI 2026 亚军 · 算法创新奖</span>
+            </a>
             <h1>视觉语言导航<br />园区巡检系统</h1>
             <p className="hero-statement">让视觉语言导航真正落地园区巡检</p>
             <p className="hero-description">
@@ -197,10 +206,74 @@ export default function Home() {
           </dl>
         </section>
 
+        <section id="awards" className="section-band awards-section">
+          <div className="section-heading awards-heading">
+            <div>
+              <p className="section-kicker">08 / COMPETITION HONORS</p>
+              <h2>赛事亚军与算法创新奖</h2>
+            </div>
+            <p>恐怖如斯战队在 2026 世界人工智能开源大赛具身未来赛道“产业园区全地形巡逻挑战赛”中获得亚军，并获 GOAI 算法创新奖。</p>
+          </div>
+
+          <div className="awards-layout">
+            <figure className="awards-showcase">
+              <Image
+                src={publicPath("/media/awards/goai-2026-awards-showcase-highlighted.png")}
+                width={1680}
+                height={945}
+                alt="恐怖如斯战队 GOAI 2026 亚军奖杯、两项证书及高亮第 2 名的现场榜单"
+              />
+              <figcaption>获奖展示图 · 现场榜单已高亮恐怖如斯队第 2 名</figcaption>
+            </figure>
+
+            <div className="award-panel">
+              <div className="award-summary" aria-label="赛事获奖信息">
+                <div><Trophy size={24} aria-hidden="true" /><span>赛事成绩</span><strong>亚军</strong></div>
+                <div><Award size={24} aria-hidden="true" /><span>专项荣誉</span><strong>GOAI 算法创新奖</strong></div>
+                <div><Route size={24} aria-hidden="true" /><span>挑战赛</span><strong>产业园区全地形巡逻</strong></div>
+              </div>
+              <div className="award-official-links">
+                <a href={competitionUrl} target="_blank" rel="noreferrer">GOAI 大赛官网 <ExternalLink size={15} aria-hidden="true" /></a>
+                <a href={trackUrl} target="_blank" rel="noreferrer">具身未来赛道页 <ExternalLink size={15} aria-hidden="true" /></a>
+              </div>
+            </div>
+          </div>
+
+          <div className="award-gallery">
+            <a href={publicPath("/media/awards/goai-runner-up-certificate-original.jpg")} target="_blank" rel="noreferrer">
+              <span className="award-photo">
+                <Image src={publicPath("/media/awards/goai-runner-up-certificate-original.jpg")} fill sizes="(max-width: 720px) 100vw, 33vw" alt="GOAI 2026 亚军获奖证书原始照片" />
+              </span>
+              <strong>亚军获奖证书</strong>
+              <small>原始照片 · 点击查看</small>
+            </a>
+            <a href={publicPath("/media/awards/goai-algorithm-innovation-award-original.jpg")} target="_blank" rel="noreferrer">
+              <span className="award-photo">
+                <Image src={publicPath("/media/awards/goai-algorithm-innovation-award-original.jpg")} fill sizes="(max-width: 720px) 100vw, 33vw" alt="GOAI 算法创新奖证书原始照片" />
+              </span>
+              <strong>GOAI 算法创新奖</strong>
+              <small>原始照片 · 点击查看</small>
+            </a>
+            <a href={publicPath("/media/awards/goai-runner-up-trophy-original.jpg")} target="_blank" rel="noreferrer">
+              <span className="award-photo award-photo-trophy">
+                <Image src={publicPath("/media/awards/goai-runner-up-trophy-original.jpg")} fill sizes="(max-width: 720px) 100vw, 33vw" alt="GOAI 2026 亚军奖杯原始照片" />
+              </span>
+              <strong>亚军奖杯</strong>
+              <small>原始照片 · 点击查看</small>
+            </a>
+          </div>
+
+          <a className="ranking-proof" href={publicPath("/media/awards/goai-roadshow-ranking-original.jpg")} target="_blank" rel="noreferrer">
+            <Image src={publicPath("/media/awards/goai-roadshow-ranking-original.jpg")} width={1920} height={1080} alt="GOAI 2026 现场路演榜单，恐怖如斯队位列第二" />
+            <span><strong>现场路演榜单</strong><small>恐怖如斯队 · 第 2 名 · 244 秒</small></span>
+            <ExternalLink size={18} aria-hidden="true" />
+          </a>
+        </section>
+
         <section id="opensource" className="section-band open-section">
           <div className="open-repo">
             <div>
-              <p className="section-kicker">08 / REPOSITORY</p>
+              <p className="section-kicker">09 / REPOSITORY</p>
               <h2>项目开源仓库</h2>
               <p>展示页面、数据格式、Goal Point 坐标转换与评测工具统一收录于项目仓库。</p>
             </div>
